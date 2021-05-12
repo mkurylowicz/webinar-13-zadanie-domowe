@@ -1,23 +1,30 @@
 package tests;
 
 import my_app.Calculator;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SumTests extends Calculator {
-
+public class SumTests {
+    Calculator calc = new Calculator();
     @Test
     public void sumTests1(){
-        System.out.println("Suma liczb 5 i 4 to " + sum(5,4));
+        //Calculator calc = new Calculator();
+
+        Assert.assertEquals(9,calc.sum(5,4));
     }
 
     @Test
     public void sumTests2(){
-        System.out.println("Suma liczb 14 i 44 to " + sum(14,44));
+
+        Assert.assertEquals(58,calc.sum(14,44));
+
     }
 
     @Test
     public void sumTests3(){
-        System.out.println("Suma liczb 45 i 58 to " + sum(45,58));
+
+        Assert.assertEquals(103,calc.sum(45,58));
+
     }
 
 }
